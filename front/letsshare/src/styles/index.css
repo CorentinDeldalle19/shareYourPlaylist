@@ -1,0 +1,13 @@
+.index{
+    display: flex;
+    flex-direction: row;
+}
+
+.left{
+    height: 100vh;
+    width: 20%;
+}
+
+.right{
+    width: 80%;
+}

@@ -1,0 +1,42 @@
+h2{
+    color: rgb(223, 222, 222);
+    font-weight: 400;
+    padding-top: 2rem;
+    padding-left: 5rem;
+}
+
+.card img{
+    width: 10rem;
+    border-radius: 0.5rem;
+}
+
+.card .title{
+    color: white;
+    font-weight: 300;
+}
+
+.card .artist{
+    color: white;
+    font-weight: 100;
+    font-size: 0.85rem;
+    margin-top: -0.85rem;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 1rem;
+}
+
+.discover {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    text-decoration: none;
+    margin-top: 1rem;
+}
+
+.discover p{
+    font-style: italic;
+}

@@ -1,0 +1,71 @@
+.Navbar {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    background-color: rgb(14, 13, 13);
+    align-items: left;
+    box-shadow: 10px 0px 50px rgba(255, 255, 255, 0.048);
+}
+
+h1{
+    color: rgb(223, 222, 222);
+    font-size: 2.5rem;
+    padding-left: 2.5rem;
+}
+
+h3{
+    color: rgb(223, 222, 222);
+    font-weight: 200;
+    margin-top: -1.7rem;
+    padding-left: 2.5rem;
+}
+
+nav{
+    margin-top: 2rem;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+li {
+    list-style: none;
+    width: 100%;
+    border-radius: 0.5rem;
+}
+
+li:hover{
+    background-color: rgb(37, 37, 37);
+}
+
+a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    text-decoration: none;
+    padding-left: 2.5rem;
+}
+
+a:hover p{
+    color: #68C9FF;
+    transition: 0.3s;
+}
+
+a:not(:hover) p{
+    color: rgb(223, 222, 222);
+    transition: 0.3s;
+}
+
+a img{
+    width: 1.05rem;
+    height: 1.05rem;
+    opacity: 0.85;
+    padding-right: 1rem;
+}
+
+a p{
+    color: rgb(223, 222, 222);
+    font-weight: 300;
+}
