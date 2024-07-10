@@ -1,0 +1,83 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+#form{
+    height: 100%;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form{
+    width: 35rem;
+    height: 35rem;
+    background-color: black;
+    margin: 11.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.inputs{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 15%;
+    align-items: center;
+    border: none;
+}
+
+#register{
+    height: 35%;
+}
+
+.inputs input{
+    background-color: rgba(223, 222, 222, 0.3);
+    border-style: solid;
+    border-color: rgba(255, 255, 255, 0.61);
+    border-width: 0.5px;
+    padding-left: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.8rem;
+    width: 60%;
+}
+
+input::placeholder{
+    color: white;
+    font-family: Inter;
+    font-weight: 100;
+}
+
+.bouton{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding-left: 0;
+    margin-left: 0;
+}
+
+.bouton #login{
+    color: black;
+    background-color: #68C9FF;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+.bottom{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.bottom a{
+    color: rgba(223, 222, 222, 1);
+    font-size: 0.8rem;
+    font-style: italic;
+}

@@ -19,7 +19,7 @@ function Navbar(){
                     <li>
                         <a href="#">
                             <img src={Playlist} alt=""/>
-                            <p>Your playlist</p>
+                            <p>Your playlists</p>
                         </a>
                     </li>
                     <li>

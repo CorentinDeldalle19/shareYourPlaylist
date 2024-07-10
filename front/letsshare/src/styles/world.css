@@ -5,6 +5,10 @@ h2{
     padding-left: 5rem;
 }
 
+.card{
+    width: 10rem;
+}
+
 .card img{
     width: 10rem;
     border-radius: 0.5rem;
@@ -27,6 +31,65 @@ h2{
     flex-direction: row;
     justify-content: space-around;
     padding-top: 1rem;
+}
+
+#cards{
+    margin-top: 6rem;
+}
+
+.contentH{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.contentH a img{
+    width: 0.8rem;
+    height: 0.8rem;
+    padding-right: 0;
+}
+
+.likes{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+}
+
+.likes a{
+    padding-left: 0.5rem;
+}
+
+.likes img{
+    width: 0.8rem;
+    height: 0.8rem;
+}
+
+.coeur{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.coeur p{
+    font-size: 1rem;
+    padding-right: 0.3rem;
+    color: rgb(223, 222, 222);
+}
+
+.genres{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: -1rem;
+    font-size: 0.9rem;
+    color: black;
+    font-weight: 400;
+}
+
+.genres p{
+    background-color: rgba(223, 222, 222, 0.3);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
 }
 
 .discover {

@@ -11,15 +11,10 @@ router.post('/register',
     body('password').isLength({ min: 6 }).withMessage('Password must be at least 6 characters long'),
     userController.createUser);
 
-router.post(
-    '/login',
-    [
-        body('email').isEmail().withMessage('Email is invalid'),
-        body('password').notEmpty().withMessage('Password is required')
-    ],
-    userController.login
-    ); // Se connecter
-
+router.post('/login',
+    body('email').isEmail().withMessage('Email is invalid'),
+    body('password').notEmpty().withMessage('Password is required'),
+    userController.login);
 
 router.post('/', authenticateToken, userController.createUser);
 router.get('/', authenticateToken, userController.getUsers);

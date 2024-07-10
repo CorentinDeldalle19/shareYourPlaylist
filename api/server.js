@@ -1,12 +1,19 @@
 const express = require('express');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 const { sequelize, models } = require('./models');
 const userRoutes = require('./routes/UserRoute');
 const playlistRoutes = require('./routes/PlaylistRoute');
 const likeRoutes = require('./routes/LikesRoutes');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3001;
+
+app.use(cors({
+  origin: 'http://localhost:3000',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+}));
 
 app.use(bodyParser.json());
 app.use('/uploads', express.static('uploads'));

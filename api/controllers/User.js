@@ -1,4 +1,7 @@
 const { User } = require('../models');
+const { validationResult } = require('express-validator');
+const jwt = require('jsonwebtoken');
+const { secret, expiresIn } = require('../config/jwtConfig');
 const bcrypt = require('bcrypt');
 
 class userController{

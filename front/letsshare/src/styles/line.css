@@ -1,0 +1,52 @@
+.line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5rem;
+    padding-right: 2rem;
+}
+
+.line h3 {
+    margin: 0;
+    font-weight: 400;
+}
+
+.line a {
+    display: flex;
+    align-items: center;
+}
+
+.hover-element {
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.hover-element img {
+    max-width: 50px; /* Adjust size as needed */
+}
+
+.tooltip-text {
+    visibility: hidden;
+    width: 6rem;
+    background-color: rgba(46,46,46,1);
+    color: rgb(223, 222, 222);
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s, width 0.3s;
+    max-width: 90vw;
+    font-size: 0.9rem;
+}
+
+.hover-element:hover .tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}

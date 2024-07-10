@@ -9,7 +9,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Playlist.init({
-    idPlaylist: {
+    idplaylist: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       unique: true
@@ -49,6 +49,8 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     sequelize,
     modelName: 'Playlist',
+    timestamps: true,
+    underscored: true,
   });
   return Playlist;
 };

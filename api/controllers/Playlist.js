@@ -1,27 +1,50 @@
 const { Playlist } = require('../models')
 
 class playlistController{
-    // Créer une playlist
+    // Créer une playlist avec une image obligatoire
     static async createPlaylist(req, res) {
         try {
-          const { title, description, data, keyWord1, keyWord2, keyWord3 } = req.body;
-          const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
-    
-          const playlist = await Playlist.create({
-            title,
-            description,
-            data,
-            keyWord1,
-            keyWord2,
-            keyWord3,
-            imageUrl,
-            likes: 0, // Initialiser le nombre de likes à 0
-            userId: req.user.id // Associer la playlist à l'utilisateur authentifié
-          });
-    
-          res.status(201).json(playlist);
+            const { title, description, data, keyWord1, keyWord2, keyWord3 } = req.body;
+            const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
+
+            if (!imageUrl) {
+                return res.status(400).json({ message: "An image is required" });
+            }
+
+            const playlist = await Playlist.create({
+                title,
+                description,
+                data,
+                keyWord1,
+                keyWord2,
+                keyWord3,
+                imageUrl,
+                likes: 0,
+                userId: req.user.id // Utilisation de req.user.id pour associer la playlist à l'utilisateur connecté
+            });
+
+            res.status(201).json(playlist);
         } catch (error) {
-          res.status(400).json({ message: error.message });
+            res.status(400).json({ message: error.message });
+        }
+    }
+
+    // Obtenir toutes les playlists de l'utilisateur connecté
+    static async getPlaylistsByUser(req, res) {
+        try {
+            const playlists = await Playlist.findAll({
+                where: {
+                    userId: req.user.id // Filtrer par l'ID de l'utilisateur connecté
+                }
+            });
+
+            if (playlists.length === 0) {
+                res.status(200).json({ message: "No playlists found for this user" });
+            } else {
+                res.status(200).json(playlists);
+            }
+        } catch (error) {
+            res.status(400).json({ message: error.message });
         }
     }
 
