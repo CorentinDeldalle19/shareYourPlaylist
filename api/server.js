@@ -5,6 +5,7 @@ const { sequelize, models } = require('./models');
 const userRoutes = require('./routes/UserRoute');
 const playlistRoutes = require('./routes/PlaylistRoute');
 const likeRoutes = require('./routes/LikesRoutes');
+const uploadRoutes = require('./routes/UploadRoutes')
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -22,6 +23,7 @@ app.use('/uploads', express.static('uploads'));
 app.use('/api/users', userRoutes);
 app.use('/api/playlists', playlistRoutes);
 app.use('/api/likes', likeRoutes);
+app.use('/api/uploads', uploadRoutes);
 
 sequelize.authenticate()
   .then(() => {

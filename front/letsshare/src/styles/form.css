@@ -19,6 +19,17 @@
     justify-content: space-around;
 }
 
+.formupload{
+    width: 40rem;
+    height: 40rem;
+    background-color: black;
+    margin: 11.5rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
 .inputs{
     display: flex;
     flex-direction: column;
@@ -66,6 +77,7 @@ input::placeholder{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
     border-radius: 0.5rem;
+    margin-top: 0rem;
 }
 
 .bottom{
@@ -80,4 +92,17 @@ input::placeholder{
     color: rgba(223, 222, 222, 1);
     font-size: 0.8rem;
     font-style: italic;
+}
+
+#upload{
+    margin-top: 5rem;
+}
+
+#cover{
+    padding-left: 2rem;
+    height: 5rem;
+}
+
+.bouton{
+    margin-top: 2rem;
 }

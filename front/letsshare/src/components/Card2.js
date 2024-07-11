@@ -24,8 +24,6 @@ function Card(props) {
             </div>
             <div className='genres'>
                 <p>{props.keyWord1}</p>
-                <p>{props.keyWord2}</p>
-                <p>{props.keyWord3}</p>
             </div>
         </div>
     );

@@ -30,22 +30,10 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.STRING,
       allowNull: false
     },
-    keyWord2: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
-    keyWord3: {
-      type: DataTypes.STRING,
-      allowNull: true
-    },
     likes: {
       type: DataTypes.INTEGER,
       allowNull: false
-    },
-    imageUrl: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
+    }
   }, {
     sequelize,
     modelName: 'Playlist',

@@ -62,8 +62,6 @@ function Cards() {
                         </div>
                         <div className='genres'>
                             <p>{playlist.keyWord1}</p>
-                            <p>{playlist.keyWord2}</p>
-                            <p>{playlist.keyWord3}</p>
                         </div>
                     </div>
                 ))

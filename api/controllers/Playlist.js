@@ -4,20 +4,13 @@ class playlistController{
     // Créer une playlist avec une image obligatoire
     static async createPlaylist(req, res) {
         try {
-            const { title, description, data, keyWord1, keyWord2, keyWord3 } = req.body;
-            const imageUrl = req.file ? `/uploads/${req.file.filename}` : null;
-
-            if (!imageUrl) {
-                return res.status(400).json({ message: "An image is required" });
-            }
+            const { title, description, data, keyWord1,} = req.body;
 
             const playlist = await Playlist.create({
                 title,
                 description,
                 data,
                 keyWord1,
-                keyWord2,
-                keyWord3,
                 imageUrl,
                 likes: 0,
                 userId: req.user.id // Utilisation de req.user.id pour associer la playlist à l'utilisateur connecté
@@ -87,9 +80,7 @@ class playlistController{
                 title, 
                 description, 
                 data, 
-                keyWord1, 
-                keyWord2, 
-                keyWord3, 
+                keyWord1,  
                 likeCount } = req.body;
 
             const playlist = await Playlist.findByPk(id);
@@ -101,9 +92,7 @@ class playlistController{
                 title: title || playlist.title, 
                 description: description || playlist.description, 
                 data: data || playlist.data, 
-                keyWord1: keyWord1 || playlist.keyWord1, 
-                keyWord2: keyWord2 || playlist.keyWord2, 
-                keyWord3: keyWord3 || playlist.keyWord3, 
+                keyWord1: keyWord1 || playlist.keyWord1,  
                 likeCount: likeCount || playlist.likeCount
             });
 
